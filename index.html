@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>제국주의 침략과 식민 지배 암기장</title>
+<style>
+:root{--bg:#fff;--fg:#1c1b1a;--mu:#6b6862;--ac:#0f6e56;--sf:#f4f2ee;--bd:#ddd9d1;--ok:#1d7a3a;--no:#b3261e;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171716;--fg:#ece9e3;--mu:#a09c93;--ac:#5dcaa5;--sf:#242422;--bd:#3a3935;--ok:#6fcf8a;--no:#f2877f}}
+:root[data-theme=dark]{--bg:#171716;--fg:#ece9e3;--mu:#a09c93;--ac:#5dcaa5;--sf:#242422;--bd:#3a3935;--ok:#6fcf8a;--no:#f2877f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+main{max-width:640px;margin:0 auto;padding:12px 16px 40px}
+h1{font-size:18px;margin:4px 0 10px}
+.tabs{display:flex;gap:6px;margin-bottom:10px}
+button,select{font:inherit;color:var(--fg);background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:9px 12px}
+.tabs button{flex:1}
+.on{background:var(--ac)!important;color:var(--bg)!important;border-color:var(--ac)!important}
+.bar{display:flex;gap:8px;margin-bottom:12px;align-items:center}
+select{flex:1;min-width:0}
+h3{font-size:15px;color:var(--ac);margin:18px 0 4px}
+ul{padding-left:18px;margin:0}li{margin:5px 0}
+b{color:var(--ac)}
+b.h:not(.s){color:transparent;background:var(--ac);border-radius:4px;cursor:pointer}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:16px;min-height:170px;padding:22px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:19px;cursor:pointer}
+.card.back{border-color:var(--ac)}
+.row{display:flex;gap:8px;margin-top:12px}.row button{flex:1}
+.mu{color:var(--mu);font-size:14px;margin:6px 0}
+.q{font-size:18px;margin:10px 0}
+.opt{display:block;width:100%;text-align:left;margin:7px 0}
+.right{border-color:var(--ok)!important;color:var(--ok)}.wrong{border-color:var(--no)!important;color:var(--no)}
+.note{background:var(--sf);border-radius:10px;padding:10px 12px;margin:10px 0;font-size:15px}
+</style></head><body><main>
+<h1>제국주의 침략과 식민 지배 암기장</h1>
+<div class="tabs" id="tabs"></div>
+<div class="bar"><select id="unit"></select><button id="x"></button></div>
+<div id="v"></div>
+</main>
+<script>
+const D=[
+["1. 불평등 조약",[
+"18세기 청·영국 무역: 영국이 차·비단·도자기를 수입하고 대가로 {은}을 지급 → 영국 무역 적자",
+"영국이 인도산 {아편}을 청에 밀수출 → 은 유출로 청 재정 악화",
+"청 정부의 아편 단속 강화 → 영국의 청 침략으로 아편 전쟁 발발({1840})",
+"{난징} 조약(1842): 영국에 홍콩 할양, 5개 항구 개항(상하이 포함), 영사 재판권, 조계지 인정",
+"난징 조약으로 영국에 할양된 곳: {홍콩}",
+"난징 조약의 의의: 동아시아 각국이 열강과 맺은 {불평등} 조약의 원형",
+"{톈진} 조약(1858): 크리스트교 포교 자유, 10개 항구 추가 개항, 외교 사절의 베이징 주재",
+"베이징 조약(1860): 톈진 조약 내용 비준, 영국에 {주룽반도} 할양",
+"일본: 페리의 내항(1853, 1854) → 미일 {화친} 조약(1854): 시모다·하코다테 개항",
+"미일 {수호 통상} 조약(1858): 나가사키·니가타 등 개항, 영사 재판권 인정",
+"조선: {운요호} 사건(1875) → 강화도 조약(1876): 부산 등 3개 항구 개항, 영사 재판권",
+"{타이}: 영국 홍콩 총독의 국교 요구 → 바우링 조약(1855): 영사 재판권·최혜국 대우·협정 관세",
+"타이가 영국과 맺은 조약: {바우링} 조약(1855) (베트남이 아님!)",
+"베트남: 프랑스군의 사이공 점령(1859) → 제1차 {사이공} 조약(1862)",
+"제1차 사이공 조약: 크리스트교 포교 허용, 3개 성 할양, 3개 항구 개항, 베트남 {외교권} 제한"]],
+["2. 조계 · 조차지",[
+"조계·거류지: 외국인이 자유롭게 통상·거주하며 {치외 법권}을 누릴 수 있는 개항장 내 지역",
+"중국·한국에서는 조계, 일본에서는 {거류지}라고 부름",
+"상하이 조계: 아편 전쟁으로 {난징} 조약 직후 영국·미국·프랑스의 조계 형성",
+"상하이 프랑스 조계에 {대한민국 임시 정부}가 수립됨 (치외 법권 적용 때문)",
+"요코하마: {미일 수호 통상} 조약(1858) 직후 일본 정부 주도로 서양인 거류지 조성",
+"요코하마: 청일 수호 조규({1871}) 후 중국인 자치권 인정 → 차이나타운 형성",
+"인천 일본 조계는 {1883}년, 청국 조계는 {1884}년에 설정",
+"조차지: 한 나라가 다른 나라의 영토 일부를 {유상 또는 무상}으로 일정 기간 빌려 통치하는 지역 (조계와 구별!)",
+"홍콩은 {난징} 조약으로 영국에 할양됨",
+"홍콩 범위: 심천하 이남 지역(신제)과 주룽반도 바운더리 라인 이북의 {200}여 개 섬",
+"홍콩의 특징: 영국의 중국 침략 거점, 중국인 노동력이 {동남아시아}로 이동하는 주요 항구"]],
+["3. 청프·청일 전쟁, 청 분할",[
+"동아시아 전통 질서: 중국과 주변국의 {책봉·조공} 관계",
+"청프 전쟁(1884): {프랑스}의 베트남 침략 → 조공국 베트남 보호를 위해 청 개입",
+"청프 전쟁 결과: {톈진} 조약(1885) → 프랑스의 베트남 보호국 인정, 청의 종주권 상실",
+"청일 전쟁 배경: 조선의 {동학 농민} 운동 → 조선 정부의 청 원군 요청 → 일본 대규모 파병",
+"일본의 {경복궁} 점령 → 청일 전쟁 발발(1894)",
+"청일 전쟁 결과: {시모노세키} 조약(1895)",
+"시모노세키 조약: 청이 조선 종주권 포기, 일본에 {타이완}과 랴오둥반도 할양",
+"갑신정변 후 청일 톈진 조약(1885): 두 나라가 조선에서 {군대}를 철수하기로 함",
+"청일 전쟁 후 중국 중심의 책봉·조공 질서 해체, {일본}이 제국주의 국가로 성장",
+"청일 전쟁 후 서구 열강이 청의 {철도 부설권}, 광산 개발권 등 이권 차지",
+"{의화단} 운동: 청 왕조를 도와 서양 세력을 몰아내자고 주장 → 8개국 연합군에 진압",
+"{신축} 조약(1901): 청의 막대한 배상금 지불, 베이징에 외국 군대 주둔 허용",
+"미국의 필리핀: 쿠바 독립 문제로 미국과 {에스파냐} 전쟁(1898) → 필리핀 군도 공식 인수"]],
+["4. 러일 전쟁",[
+"삼국 간섭: {러시아}·프랑스·독일의 압박으로 일본이 랴오둥반도를 청에 반환",
+"삼국 간섭 결과: 일본과 러시아가 한반도와 {만주}의 지배권을 두고 충돌",
+"러일 전쟁 개시: {1904}년 (영국·미국의 일본 지원, 러시아의 만주 독점 반대)",
+"러일 전쟁: 일본이 {쓰시마} 해전(1905.5)에서 러시아 발트 함대 격침",
+"{가쓰라·태프트} 밀약(1905): 일본은 한국, 미국은 필리핀에 대한 지배권을 서로 인정",
+"가쓰라·태프트 밀약에서 일본이 지배권을 인정받은 곳: {한국}, 미국은 필리핀",
+"{포츠머스} 조약(1905): 미국의 중재로 러일 전쟁 종결",
+"포츠머스 조약: 일본이 한국에서 우월한 지위 인정, 러시아의 뤼순·다롄 {조차권} 확보",
+"포츠머스 조약: 일본이 {남만주} 철도 확보, 북위 {50}도 이남 사할린 할양",
+"포츠머스 조약 후 일본은 동아시아에서 제1 강국으로 군림. 청의 타이완 할양은 {시모노세키} 조약 내용"]],
+["5. 동남아시아 식민 지배",[
+"동남아시아에서 식민지가 되지 않은 유일한 나라: {태국}",
+"식민지 경계 확립: 토지 측량·지도 제작 → 오늘날 동남아시아의 {국경선} 획정",
+"네덜란드의 식민지: {인도네시아}(네덜란드령 동인도)",
+"네덜란드의 {강제 재배} 제도: 자와 농민에게 커피·사탕수수 재배 강요 → 세계 시장 판매, 산업화 추진",
+"프랑스령 {인도차이나} 연방: 베트남·캄보디아·라오스",
+"프랑스의 간접 통치: 명목상 {응우옌} 왕조를 유지해 베트남인의 저항 최소화",
+"프랑스의 문화적 지배: 유교 말살, {꾸옥응으}(로마자 표기) 사용, 프랑스식 교육",
+"영국의 식민지: 버마(미얀마), 말레이반도, 보르네오섬 북부(현재의 {말레이시아})",
+"영국 직할 식민지: 페낭·말라카·{싱가포르}(총독이 관할)",
+"영국: 주석·고무 플랜테이션 지역은 {주재관} 관할, 술탄에게 행정 자치권만 부여",
+"영국 비직할 식민지: 경제적 가치가 적은 지역에는 {고문관} 배치, 술탄에게 폭넓은 자치권",
+"미국의 식민지: {필리핀} 군도(에스파냐로부터 인수)",
+"미국의 {동화} 정책: 영어 교육·미국식 민주주의 제도(자치 훈련)를 명분으로 한 자비로운 정책",
+"미국의 식민 지배 현실: 저항 세력을 철저히 {탄압}",
+"파타힐라 광장은 네덜란드가 {인도네시아}를 점령한 뒤 세운 청사 등이 있는 곳(자카르타)"]],
+["6. 일본의 영토 확장",[
+"일본 영토 확장 순서: 홋카이도 개척 → 류큐 병합 → 타이완 → 사할린 남부 → 한국 병합 → {남양 군도}",
+"홋카이도 개척: {에조치}를 홋카이도로 개칭 후 개척 시작",
+"류큐 왕국을 강제 병합하고 {오키나와}현 설치",
+"{타이완}: 청일 전쟁 승리 후 할양받은 일본 최초의 해외 식민지",
+"러일 전쟁 후 {포츠머스} 조약: 사할린 남부(가라후토), 관동주(뤼순·다롄) 조차, 남만주 철도 획득",
+"한국 병합 조약: {1910}년, 대한 제국 강제 병합",
+"남양 군도: 제1차 세계 대전 후 적도 이북을 국제 연맹의 {위임} 통치령으로 통치",
+"일본의 식민 지배 방식: 일본과 식민지의 유사성을 강조하는 {동화} 정책 (저항하면 철저히 탄압)",
+"식민 지배에 대한 저항: 한국의 {3·1} 운동, 중국의 {5·4} 운동",
+"아이누 민족의 거주지: 에조치(홋카이도), 사할린, {쿠릴} 열도",
+"아이누 민족: 홋카이도 개척 후 말살·동화 정책 → 2019년 아이누 민족 {권리 보호법} 공포"]],
+["7. 아시아·태평양 전쟁",[
+"만주 사변({1931}): 일본 {관동군}이 남만주 철도를 폭파한 뒤 만주 침략",
+"만주 사변 결과: 일본이 {만주국} 수립(1932), 청의 마지막 황제 {푸이}를 황제로 내세움",
+"일본은 국제 연맹 탈퇴 후 중국 {화북} 지방으로 세력 확장",
+"중일 전쟁(1937)의 계기: 베이징 근교 {루거우차오} 사건 (중·일 군대 충돌)",
+"중일 전쟁: 일본이 3개월 만에 상하이와 {난징}(국민 정부 수도) 등 점령",
+"중국 국민 정부는 수도를 {충칭}으로 옮겨 항전 지속 (난징이 아님!)",
+"제주도 {알뜨르} 비행장: 일본이 조성, 중일 전쟁 때 전투기·폭격기 중간 기점",
+"일본의 3국 동맹: 독일, {이탈리아}, 일본 (전쟁을 통한 세계 재분할 도모)",
+"일본의 베트남 남부 진군 → {미국}의 경제 제재(일본 자산 동결, 석유 수출 금지)",
+"아시아·태평양 전쟁 발발({1941}): 하와이 {진주만} 미국 해군 기지 기습",
+"{대동아} 공영권: 아시아 공동 번영을 내세웠지만 실상은 침략·전쟁 동원 구실",
+"일본의 점령지 확대: 미국령 필리핀, 영국령 미얀마, 네덜란드령 인도네시아, 남태평양",
+"전세 역전: {미드웨이} 해전(1942), 도쿄 대공습(1945)",
+"일본은 {오키나와}에서 결사 항전 (히메유리 평화 기념 자료관: 여학생·교원 집단 자결)",
+"일본의 패배: 히로시마·나가사키 원자 폭탄, {소련}의 참전 → 무조건 항복(1945)",
+"사건 순서: 만주국(1932) → 루거우차오(1937) → 미드웨이(1942)·도쿄 대공습 → {원자 폭탄}(1945)"]],
+["8. 반제·반전 연대, 반식민 운동",[
+"동방 무정부주의자 연맹: {1928}년 창설",
+"동방 무정부주의자 연맹 배경: 반제국주의 운동으로 {아나키즘}(무정부주의) 전파",
+"동방 무정부주의자 연맹은 {상하이} 프랑스 조계에서 창설, 7개국 대표 참여",
+"동방 무정부주의자 연맹의 특징: {에스페란토} 사용",
+"에스페란토: 1887년 폴란드의 {자멘호프} 박사가 만든 세계어",
+"일본 반제 동맹: 일본 제국주의 타도 목표, 한국인과 일본인의 {공동} 투쟁 강조",
+"반전을 위한 항일 연대의 배경: {만주 사변}(1931) 이후",
+"만주 사변 후 {한중 민족 항일 대동맹} 결성: 대한민국 임시 정부와 중국 국민당 인사들의 비밀 결사",
+"조선 의용대: {김원봉}이 조직, 중국 국민당군과 공동 항일",
+"한국광복군: {대한민국 임시 정부}가 창설, 중국 국민 정부 지원으로 연합국 일원으로 대일전 참전",
+"일본 인민 반전 동맹: {가지 와타루}가 결성, 일본인 포로와 중국 거류민에게 반전 교육",
+"타이완 의용대: {리요우방}이 결성, 조선 의용대와 연대(중국 남부 활동)",
+"동남아시아 반식민 운동 배경: 1920년대 이후 {공산당}이 정치 세력으로 성장, 민족주의적 성격 강함",
+"베트남 공산당(1930): {호찌민}이 주도, 프랑스령 인도차이나 전체의 해방 목표",
+"말라야 공산당(1930): {싱가포르}에서 결성, 말라야인 결집·반제국주의 투쟁",
+"{타킨당}(우리 버마인 연맹, 1930): 버마 급진적 민족주의자들이 결성, 영국으로부터 완전한 독립 추구",
+"타킨당이 배출한 버마 독립 운동 지도자: {아웅 산}",
+"1976년 베트남 통일 후 사이공은 {호찌민}시로 개칭"]]];
+const C=[];D.forEach((u,i)=>u[1].forEach(t=>{const m=t.match(/\{(.+?)\}/);if(m)C.push({u:i,t:t,a:m[1],q:t.replace(/\{.+?\}/,"＿＿＿").replace(/[{}]/g,"")})}));
+const $=id=>document.getElementById(id);
+let tab=0,U=-1,hide=false,fl={},qz={};
+const hl=t=>t.replace(/\{(.+?)\}/g,(m,a)=>hide?'<b class="h" onclick="this.classList.toggle(\'s\')">'+a+'</b>':'<b>'+a+'</b>');
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const pool=()=>C.filter(c=>U<0||c.u==U);
+function init(){
+$("tabs").innerHTML=["요약","카드","퀴즈"].map((n,i)=>'<button class="'+(i==tab?"on":"")+'" onclick="tab='+i+';reset()">'+n+'</button>').join("");
+$("unit").innerHTML='<option value="-1">전체 ('+C.length+'개)</option>'+D.map((u,i)=>'<option value="'+i+'"'+(U==i?" selected":"")+'>'+u[0]+'</option>').join("");
+$("unit").onchange=e=>{U=+e.target.value;reset()};
+const x=$("x");x.style.display=tab==1?"none":"";
+x.textContent=tab==0?(hide?"답 보기":"답 가리기"):"새로 시작";
+x.onclick=()=>{if(tab==0){hide=!hide;draw()}else reset()};
+}
+function reset(){fl={d:sh(pool()),i:0,k:0};qz={d:sh(pool()),i:0,s:0,w:[],a:false};init();draw()}
+function draw(){[sum,flash,quiz][tab]()}
+function sum(){
+$("v").innerHTML=D.map((u,i)=>(U<0||U==i)?'<h3>'+u[0]+'</h3><ul>'+u[1].map(t=>'<li>'+hl(t)+'</li>').join("")+'</ul>':"").join("")+(hide?'<p class="mu">가려진 답을 눌러 확인하세요.</p>':"");
+}
+function flash(){
+if(fl.i>=fl.d.length){const n=fl.d.length-fl.k;$("v").innerHTML='<div class="card">한 바퀴 완료!<br>외움 '+fl.k+' / 다시 볼 카드 '+n+'</div><div class="row">'+(fl.w&&fl.w.length?'<button class="on" onclick="fl.d=sh(fl.w);fl.w=[];fl.i=0;fl.k=0;flash()">헷갈린 카드만 복습</button>':'')+'<button onclick="reset()">처음부터</button></div>';return}
+const c=fl.d[fl.i];fl.b=false;
+$("v").innerHTML='<p class="mu">'+(fl.i+1)+' / '+fl.d.length+' · '+D[c.u][0]+'</p><div class="card" id="cd">'+c.q+'</div><p class="mu">카드를 눌러 정답 확인</p><div class="row"><button onclick="mark(0)">헷갈려요</button><button class="on" onclick="mark(1)">외웠어요</button></div>';
+$("cd").onclick=()=>{fl.b=!fl.b;$("cd").className="card"+(fl.b?" back":"");$("cd").innerHTML=fl.b?hl(c.t):c.q};
+}
+function mark(k){const c=fl.d[fl.i];if(k)fl.k++;else(fl.w=fl.w||[]).push(c);fl.i++;flash()}
+function quiz(){
+if(qz.i>=qz.d.length){$("v").innerHTML='<div class="card">점수 '+qz.s+' / '+qz.d.length+'</div><div class="row">'+(qz.w.length?'<button class="on" onclick="qz={d:sh(qz.w),i:0,s:0,w:[],a:false};quiz()">틀린 문제 다시</button>':'')+'<button onclick="reset()">새로 시작</button></div>'+(qz.w.length?'<h3>틀린 문제</h3><ul>'+qz.w.map(c=>'<li>'+hl(c.t)+'</li>').join("")+'</ul>':"");return}
+const c=qz.d[qz.i];let ds=sh([...new Set(C.filter(x=>x.u==c.u&&x.a!=c.a).map(x=>x.a))]).slice(0,3);
+if(ds.length<3)ds=ds.concat(sh([...new Set(C.map(x=>x.a))].filter(a=>a!=c.a&&!ds.includes(a))).slice(0,3-ds.length));
+const o=sh(ds.concat(c.a));qz.a=false;
+$("v").innerHTML='<p class="mu">'+(qz.i+1)+' / '+qz.d.length+' · 점수 '+qz.s+'</p><div class="q">'+c.q+'</div>'+o.map((a,j)=>'<button class="opt" id="o'+j+'">'+a+'</button>').join("")+'<div id="fb"></div>';
+o.forEach((a,j)=>$("o"+j).onclick=()=>{if(qz.a)return;qz.a=true;const ok=a==c.a;
+if(ok)qz.s++;else qz.w.push(c);
+o.forEach((b,k)=>{if(b==c.a)$("o"+k).classList.add("right")});if(!ok)$("o"+j).classList.add("wrong");
+$("fb").innerHTML='<div class="note">'+(ok?"정답! ":"오답. ")+hl(c.t)+'</div><div class="row"><button class="on" onclick="qz.i++;quiz()">다음</button></div>'});
+}
+reset();
+</script></body></html>
